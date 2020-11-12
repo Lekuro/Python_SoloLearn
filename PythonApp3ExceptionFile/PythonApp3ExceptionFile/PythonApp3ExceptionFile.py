@@ -195,8 +195,18 @@ for line in file:
     print(line)
 file.close() 
 
-file = open("filename.txt", "r")
-file_content = file.readlines()
-for i in file_content:
-    print(i)
-file.close()
+try:
+   f = open("filename.txt")
+   print(f.read())
+finally:
+   f.close()
+
+with open("filename.txt") as f:
+   print(f.read())
+
+
+try: 
+    with open("test.txt") as f:
+        print(f.read()) 
+except:
+    print("Error")
