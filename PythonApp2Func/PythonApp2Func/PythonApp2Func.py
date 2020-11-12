@@ -88,5 +88,5 @@ print(pi)
 
 #import some_module     # error
 
-import math as m
-print(math.sqrt(25))
+#import math as m
+#print(math.sqrt(25))
